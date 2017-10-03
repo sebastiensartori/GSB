@@ -16,7 +16,7 @@
          <input type="submit" value="Valider" name="valider">
          <input type="reset" value="Annuler" name="annuler"> 
       </p>
-      <center> Vous etes comptable ? Veuillez vous connecter <a href="vues/v_connexionComptable.php"> ici. </a>
+      <center> Vous etes comptable ? Veuillez vous connecter <a href="vues/v_connexion.php"> ici. </a>
 </form>
 
 </div>
