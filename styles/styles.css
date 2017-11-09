@@ -1,6 +1,6 @@
 /* Styles des divisions principales de la page */
 body{
-  background-color: black;
+  background-color: #77AADD;
 	background-image: url(imgs/FONDGLOBAL.jpg);
 	background-repeat: repeat-x;
   margin:0% 0%;
@@ -9,23 +9,23 @@ body{
   font-size:0.8em;
 }
 #page {
-  background-color:black;
+  background-color:white;
   width : 65%;
   margin : auto ;
-  border : 0.2em solid yellow;
+  
   padding : 0.1em;
 }
 #entete{
-  background-color:black;
-	color : yellow;
-	border: solid 0.1em yellow;
+  background-color:rgb(72,198,236);
+	color : #980101;
+	border: solid 0.1em #980101;
 	height: 154px;
 	padding: 0em;
 	border-collapse: separate;
 }
 #pied{
   clear : both;
-	border : solid 0.2em yellow;
+	border : solid 0.2em #980101;
 	margin-left : 18%;
 	margin-top : 1em;
 	padding:0.4em;
@@ -35,8 +35,8 @@ body{
 #menuGauche {
 	margin-top : 0.8em;
 	padding: 1em;
-	background-color: black;
-	color: yellow;
+	background-color: white;
+	color: rgb(0,85,227);
 	float: left;
 	width: 14%;
 }
@@ -44,9 +44,8 @@ body{
 #contenu{
 	border: none;
 	padding: 1.3em;
-	background-color: black;
-        color: yellow;
-	border-left :  groove 0.8em yellow;
+	background-color: white;
+	border-left :  groove 0.8em #980101;
   margin-top : 1.2em;
 	margin-left: 18%;
 /* permet de fixer une hauteur mini sur les navigateurs modernes */
@@ -80,14 +79,14 @@ ul#menuList li {
 
 /* apparences des liens dans listes et sous-listes non num�rot�es */
 ul#menuList a {
-    color:yellow;
+    color:rgb(0,85,227);
     display:block;
     text-decoration:none;
     width:100%;
 }
 ul#menuList a:hover {
     background: rgb(0,85,227);
-    color: yellow;
+    color: white;
 }
 
 #entete #logoGSB {
@@ -135,7 +134,7 @@ ul#menuList a:hover {
   border-right-width : 0.1em;
   border-top-width : 0em;
   border-style : solid;
-  border-color : yellow;
+  border-color : #000;
   text-align:right ;
   width : 95%;
   margin-top:0em;
@@ -144,7 +143,6 @@ form {
   margin-bottom:1em;  
 }
 .corpsForm legend {
-  color: yellow;
   font-weight:bold;
   font-size:1.2em;
 }
@@ -167,15 +165,15 @@ button{
   vertical-align:middle;
 }
 input:hover, textarea:hover, select:hover{
-  background-color : yellow;
+  background-color : #FAFAE6;
   cursor : pointer;
 }
 
 /*  Le texte des messages d'erreur est de couleur rose sur fond ocre et de 
 taille de caract�res l�g�rement sup�rieure � la normale */
 .erreur{ 
-   background-color:white;
-   color:yellow;
+   background-color:rgb(237,210,229);
+   color:rgb(203,28,128);
    font-size:1.1em;
    width:95%;
 }
@@ -185,7 +183,7 @@ taille de caract�res l�g�rement sup�rieure � la normale */
 
 .info {
    background-color:rgb(178,207,81);
-   color : yellow;
+   color : white;
    font-size:1.1em;
    width : 95%  
 }
@@ -203,12 +201,12 @@ taille de caract�res l�g�rement sup�rieure � la normale */
 /* Style pour les liens de la page principale */
 #contenu a {
    font-size : 1.1em;
-   color:black;
+   color:gray;
    text-decoration:none;
 }
 #contenu a:hover {
    text-decoration:underline;
-   background-color : black;
+   background-color : #D9BB7A;
    font-size : 1em;
 }
 
@@ -219,9 +217,9 @@ taille de caract�res l�g�rement sup�rieure � la normale */
 
 /* Styles pour les tableaux de la page principale */
 #contenu table {
-   background-color:black;
+   background-color:#FFF;
    border : 0.1em solid #777777;
-   color:yellow;
+   color:black;
    margin-right : auto ;
    margin-left:0.3em;
    border-collapse : collapse;
@@ -229,7 +227,7 @@ taille de caract�res l�g�rement sup�rieure � la normale */
 
 /* Style pour les lignes d'en-t�te des tableaux */
 #contenu th {  
-   background-color:black;
+   background-color:#77AADD;
    height:21px;
    text-align:left;
    vertical-align:top;
@@ -243,7 +241,6 @@ taille de caract�res l�g�rement sup�rieure � la normale */
 }
 
 #contenu h3 {
-    color: yellow;
     font-size : 1.2em;
 }
 table.listeLegere {
@@ -253,7 +250,6 @@ table.listeLegere {
 
 /* Tableaux quadrill�s utilis�s pour l'affichage de listes avec contenu l�ger*/ 
 table.listeLegere th, table.listeLegere td {
-  color: yellow;
   border : dotted rgb(178,207,81) 0.1em;
   padding:0.5em;
   vertical-align : top;
@@ -261,7 +257,6 @@ table.listeLegere th, table.listeLegere td {
 }
 
 table.listeLegere caption {
-  color: yellow;
   font-size : 1.1em;
   text-align : left;
   margin-bottom : 0.3em;
@@ -286,11 +281,11 @@ table.listeLegere th.libelle{
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	font-weight: bold;
-	color: black;
+	color: #1D2941;
 	text-decoration: none;
 	border : 1px solid #6988BE;
 	padding-left: 25px;
-	background-color: yellow;
+	background-color: #E9F1FE;
   height : 28px;
 }
 

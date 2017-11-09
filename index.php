@@ -1,4 +1,4 @@
-    <?php
+<?php
 session_start();
 require_once("include/fct.inc.php");
 require_once ("include/class.pdogsb.inc.php");
@@ -19,10 +19,16 @@ switch($uc){
 	case 'etatFrais' :{
 		include("controleurs/c_etatFrais.php");break; 
 	}
-        case 'validerFrais':{
-            include("controleurs/c_validerFrais.php");
-            break;
+        case 'validerFrais' :{
+            include("controleurs/c_validerFrais.php");break;
+        }
+        case 'gererPaiement' :{
+            include("controleurs/c_suivrePaiement.php");break;
+        }
+        case 'pdf' :{
+            include("controleurs/c_pdf.php");break;
         }
 }
 include("vues/v_pied.php") ;
 ?>
+

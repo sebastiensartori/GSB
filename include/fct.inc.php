@@ -7,24 +7,23 @@
  * @version    1.0
  */
  /**
- * Teste si un quelconque visiteur est connecté
+ * Teste si un quelconque utilisateur est connecté
  * @return vrai ou faux 
  */
 function estConnecte(){
-  return isset($_SESSION['idVisiteur']);
+  return isset($_SESSION['idutilisateur']);
 }
 /**
- * Enregistre dans une variable session les infos d'un visiteur
+ * Enregistre dans une variable session les infos d'un utilisateur
  
  * @param $id 
  * @param $nom
  * @param $prenom
  */
-function connecter($id,$nom,$prenom,$comptable){
-	$_SESSION['idVisiteur']= $id; 
+function connecter($id,$nom,$prenom){
+	$_SESSION['idutilisateur']= $id; 
 	$_SESSION['nom']= $nom;
 	$_SESSION['prenom']= $prenom;
-        $_SESSION['comptable'] = $comptable;
 }
 /**
  * Détruit la session active
@@ -153,7 +152,7 @@ function lesQteFraisValides($lesFrais){
  */
 function valideInfosFrais($dateFrais,$libelle,$montant){
 	if($dateFrais==""){
-		ajouterErreur("Le champs ne doit pas être vide");
+		ajouterErreur("Le champ date ne doit pas être vide");
 	}
 	else{
 		if(!estDatevalide($dateFrais)){
@@ -161,15 +160,15 @@ function valideInfosFrais($dateFrais,$libelle,$montant){
 		}	
 		else{
 			if(estDateDepassee($dateFrais)){
-				ajouterErreur("date d'enregistrement du frais dépassée");
+				ajouterErreur("date d'enregistrement du frais dépassé, plus de 1 an");
 			}			
 		}
 	}
 	if($libelle == ""){
-		ajouterErreur("Le champs ne peut pas être vide");
+		ajouterErreur("Le champ description ne peut pas être vide");
 	}
 	if($montant == ""){
-		ajouterErreur("Le champs ne peut pas être vide");
+		ajouterErreur("Le champ montant ne peut pas être vide");
 	}
 	else
 		if( !is_numeric($montant) ){
@@ -200,5 +199,30 @@ function nbErreurs(){
 	   return count($_REQUEST['erreurs']);
 	}
 }
+function moisSuivant($mois)
+{    
+     
+    $numAnnee =substr( $mois,0,4);
+    $numMois =substr( $mois,4,2);
+    
+    
+    if($numMois == 12)
+    {
+        $numAnnee++;
+        $nouveauMois = $numAnnee."01";
+    }
+    else if($numMois < 9)
+    {
+        $numMois++;
+        $nouveauMois = $numAnnee."0".$numMois;
+    }
+    else
+    {
+        $numMois++;
+        $nouveauMois = $numAnnee."".$numMois;
+    }
+    
+    return $nouveauMois;
+}
 
-
+?>

@@ -9,7 +9,7 @@
                 <th class="action">&nbsp;</th>              
              </tr>
           
-        <?php    
+    <?php    
 	    foreach( $lesFraisHorsForfait as $unFraisHorsForfait) 
 		{
 			$libelle = $unFraisHorsForfait['libelle'];
@@ -22,7 +22,7 @@
                 <td><?php echo $libelle ?></td>
                 <td><?php echo $montant ?></td>
                 <td><a href="index.php?uc=gererFrais&action=supprimerFrais&idFrais=<?php echo $id ?>" 
-                    onclick="return confirm('Voulez-vous vraiment supprimer ce frais?');">Supprimer le frais</a></td>
+				onclick="return confirm('Voulez-vous vraiment supprimer ce frais?');">Supprimer ce frais</a></td>
              </tr>
 	<?php		 
           
@@ -34,18 +34,18 @@
       <div class="corpsForm">
          
           <fieldset>
-            <legend>Nouvelle fiche hors forfait:
+            <legend>Nouvel élément hors forfait
             </legend>
             <p>
               <label for="txtDateHF">Date (jj/mm/aaaa): </label>
               <input type="text" id="txtDateHF" name="dateFrais" size="10" maxlength="10" value=""  />
             </p>
             <p>
-              <label for="txtLibelleHF">Libellé:</label>
+              <label for="txtLibelleHF">Libellé</label>
               <input type="text" id="txtLibelleHF" name="libelle" size="70" maxlength="256" value="" />
             </p>
             <p>
-              <label for="txtMontantHF">Montant en €: </label>
+              <label for="txtMontantHF">Montant : </label>
               <input type="text" id="txtMontantHF" name="montant" size="10" maxlength="10" value="" />
             </p>
           </fieldset>
